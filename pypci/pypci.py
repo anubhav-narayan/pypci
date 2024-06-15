@@ -116,6 +116,8 @@ def parse_lspci_output(output_txt):
             size = int(size_str[:-1]) * 1024
         elif size_str.endswith('M'):
             size = int(size_str[:-1]) * 1024 * 1024
+        elif size_str.endswith('G'):
+            size = int(size_str[:-1]) * 1024 * 1024 * 1024
         else:
             size = int(size_str)
             pass
